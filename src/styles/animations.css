@@ -1,0 +1,119 @@
+@keyframes slotSpin {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px #4f46e5);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px #7c3aed);
+  }
+}
+
+@keyframes neonFlicker {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes winTextAnimation {
+  0% {
+    transform: scale(0) rotate(-10deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes floatingAnimation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.slot-spin {
+  animation: slotSpin 0.5s linear infinite;
+}
+
+.neon-text {
+  text-shadow: 0 0 5px #fff,
+               0 0 10px #4f46e5,
+               0 0 20px #4f46e5,
+               0 0 30px #4f46e5,
+               0 0 40px #4f46e5;
+  animation: neonFlicker 1.5s ease-in-out infinite;
+}
+
+.machine-glow {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.flowing-border {
+  background: linear-gradient(
+    45deg,
+    #4f46e5,
+    #7c3aed,
+    #2563eb,
+    #7c3aed,
+    #4f46e5
+  );
+  background-size: 200% 200%;
+  animation: borderFlow 3s linear infinite;
+}
+
+.win-animation {
+  animation: winTextAnimation 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.floating {
+  animation: floatingAnimation 3s ease-in-out infinite;
+}
+
+.neon-legendary {
+  text-shadow: 0 0 10px #ffd700,
+               0 0 20px #ffd700,
+               0 0 30px #ffd700;
+}
+
+.neon-epic {
+  text-shadow: 0 0 10px #a855f7,
+               0 0 20px #a855f7,
+               0 0 30px #a855f7;
+}
+
+.neon-rare {
+  text-shadow: 0 0 10px #3b82f6,
+               0 0 20px #3b82f6,
+               0 0 30px #3b82f6;
+}
